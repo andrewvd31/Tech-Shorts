@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Expand Button</title>
+    <style>
+        /* BODY CSS PROPERTIES */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d0046;
+            margin: 0;
+        }
+        /* BUTTON AND BUTTON HOVER CSS PROPERTIES */
+        .button {
+            font-size: 24px;
+            padding: 15px 30px;
+            background-color: #f57c00;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s ease;
+            opacity: 0.8;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .button:hover{
+            opacity: 1;
+        }
+
+        .button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    </style>
+</head>
+<body>
+    <button class="button">Hover Me</button>
+</body>
+</html>
