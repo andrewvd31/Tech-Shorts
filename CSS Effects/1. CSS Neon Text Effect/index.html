@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Neon Text Effect</title>
+    <style>
+        /*imp! BODY CSS PROPERTIES */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+        }
+        /* NEON TEXT COLOR PROPERTIES */
+        .neon-text {
+            font-size: 80px;
+            color: #fff;
+            text-shadow: 0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #ff00ff,
+                0 0 30px #ff00ff,
+                0 0 40px #ff00ff,
+                0 0 50px #ff00ff,
+                0 0 60px #ff00ff;
+            animation: flicker 1.5s infinite alternate;
+        }
+        /* NEON TEXT ANIMATION PROPERTIES */
+        @keyframes flicker {
+            0%,
+            19.99%,
+            22%,
+            62.99%,
+            64%,
+            64.99%,
+            70%,
+            100% {
+                text-shadow: 0 0 5px #fff,
+                    0 0 10px #fff,
+                    0 0 20px #ff00ff,
+                    0 0 30px #ff00ff,
+                    0 0 40px #ff00ff,
+                    0 0 50px #ff00ff,
+                    0 0 60px #ff00ff;
+            }
+            20%,
+            21.99%,
+            63%,
+            63.99%,
+            65%,
+            69.99% {
+                text-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-text">Demo Text</div>
+</body>
+</html>
