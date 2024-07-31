@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Gradient Background</title>
+    <style>
+        /* BODY CSS PROPERTIES */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(270deg, #ff6ec4, #7873f5);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        /* TEXT CSS PROPERTIES */
+        h1 {
+            font-size: 4em;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        /* GRADIENT BACKGRROUND ANIMATION */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cool Gradient</h1>
+</body>
+</html>
