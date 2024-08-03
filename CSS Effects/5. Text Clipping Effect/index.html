@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Clipping Mask</title>
+    <style>
+        /* BODY CSS PROPERTIES */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0e00697a;
+        }
+        /* TEXT CLIPPING CSS PROPERTIES */
+        .clipped-text {
+            font-size: 10vw;
+            font-weight: bold;
+            color: transparent;
+            background: url('https://picsum.photos/1700/900') no-repeat center center;
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="clipped-text">An Image</div>
+</body>
+</html>
