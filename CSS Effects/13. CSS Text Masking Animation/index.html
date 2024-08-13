@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Masking Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            margin: 0;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .text {
+            font-size: 4rem;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .text::before {
+            content: 'MASKED TEXT';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #61dafb, #fb61da, #61dafb);
+            background-size: 200%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: slide 3s linear infinite;
+        }
+        @keyframes slide {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="text">MASKED TEXT</div>
+</body>
+</html>
