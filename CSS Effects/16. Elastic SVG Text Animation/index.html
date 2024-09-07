@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic SVG Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            margin: 0;
+            overflow: hidden;
+        }
+        svg {
+            font-family: 'Arial', sans-serif;
+            font-size: 100px;
+            fill: none;
+            stroke: #61dafb;
+            stroke-width: 4;
+            stroke-dasharray: 600;
+            stroke-dashoffset: 600;
+            animation: draw 3s ease-in-out infinite, elastic 1s ease-out infinite;
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        @keyframes elastic {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 800 200">
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">Elastic Text</text>
+    </svg>
+</body>
+</html>

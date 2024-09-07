@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Battle 1 - Target 19 - Cube</title>
+  <style>
+    body {
+      background: #0B2429;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .bottom {
+      width: 100px;
+      height: 100px;
+      background: #F3AC3C;
+      grid-column: 1 / span 2;
+      justify-self: center;
+      rotate: 45deg;
+    }
+
+    .left,
+    .right {
+      width: 70px;
+      height: 70px;
+      translate: 0px 15px;
+    }
+
+    .left {
+      background: #998235;
+      transform: skew(0deg, -45deg);
+    }
+
+    .right {
+      background: #1A4341;
+      transform: skew(0deg, 45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="left"></div>
+  <div class="right"></div>
+  <div class="bottom"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle 1 - Target 6 - Missing Slice</title>
+    <style>
+        body {
+            background: #E3516E;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: auto auto;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #top-left {
+            background: #51B5A9;
+            border-radius: 100% 0 0;
+        }
+
+        #top-right {
+            background: #FADE8B;
+            border-radius: 0 100% 0 0;
+        }
+
+        #bottom-left {
+            background: #F7F3D7;
+            border-radius: 0 0 0 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="top-left"></div>
+    <div id="top-right"></div>
+    <div id="bottom-left"></div>
+</body>
+</html>

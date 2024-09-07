@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Particle Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #111;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+        }
+        .particle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #61dafb;
+            border-radius: 50%;
+            animation: move 5s infinite linear;
+        }
+        @keyframes move {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(calc(100vw * var(--dir)));
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = `${Math.random() * 100}vw`;
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.animationDuration = `${Math.random() * 2 + 3}s`;
+            particle.style.setProperty('--dir', Math.random() > 0.5 ? 1 : -1);
+            document.body.appendChild(particle);
+        }
+    </script>
+</body>
+</html>

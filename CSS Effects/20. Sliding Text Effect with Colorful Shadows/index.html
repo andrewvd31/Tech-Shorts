@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Text Effect with Colorful Shadows</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        .sliding-text {
+            font-size: 60px;
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: slide 3s ease-in-out infinite, shadow 3s ease-in-out infinite;
+        }
+        @keyframes slide {
+            0% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        @keyframes shadow {
+            0% {
+                text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7),
+                             -2px -2px 4px rgba(0, 255, 0, 0.7);
+            }
+            50% {
+                text-shadow: 4px 4px 6px rgba(0, 0, 255, 0.7),
+                             -4px -4px 6px rgba(255, 255, 0, 0.7);
+            }
+            100% {
+                text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.7),
+                             -2px -2px 4px rgba(0, 255, 0, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sliding-text">Sliding Text</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Battle 1 - Target 14 - Web Maker Logo</title>
+  <style>
+    body {
+      background: #F2F2B6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    div {
+      border-top: 130px solid #FD4602;
+      border-right: 75px solid transparent;
+      border-left: 75px solid transparent;
+    }
+
+    .middleLeft {
+      transform: translate(30px);
+    }
+
+    .middleRight {
+      transform: rotate(180deg) translate(30px);
+    }
+
+    .left {
+      transform: translate(160px);
+      border-top-color: #FF6D00;
+      z-index: 1;
+    }
+
+    .right {
+      transform: rotate(180deg) translate(160px);
+      border-top-color: #FF6D00;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="left"></div>
+  <div class="middleLeft"></div>
+  <div class="middleRight"></div>
+  <div class="right"></div>
+</body>
+</html>

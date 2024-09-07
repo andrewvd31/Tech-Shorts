@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Zoom Text Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        .zoom-container {
+            position: relative;
+            overflow: hidden;
+            width: 300px;
+            height: 150px;
+        }
+        .zoom-text {
+            font-size: 60px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            animation: zoom 5s infinite linear;
+        }
+        @keyframes zoom {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(10);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="zoom-container">
+        <div class="zoom-text">Zoom</div>
+    </div>
+</body>
+</html>

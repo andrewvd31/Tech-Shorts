@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Battle 1 - Target 5 - Acid Rain</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #0B2429;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        div {
+            width: 120px;
+            height: 120px;
+            background: #998235;
+            border-radius: 50% 0 50% 50%;
+        }
+
+        #top-rigth,
+        #bottom-left {
+            position: relative;
+            background: #F3AC3C;
+        }
+
+        #top-rigth {
+            right: 60px;
+            bottom: 60px;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        #bottom-left {
+            left: 60px;
+            top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bottom-left"></div>
+    <div></div>
+    <div id="top-rigth"></div>
+</body>
+</html>

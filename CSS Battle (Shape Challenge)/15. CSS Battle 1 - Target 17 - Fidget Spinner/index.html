@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Battle 1 - Target 17 - Fidget Spinner</title>
+  <style>
+    body {
+      background: #09042A;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    div {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .top,
+    .bottom {
+      grid-column-start: 2;
+      background: #F5BB9C;
+      box-shadow: 0px 0px 0px 10px #09042A;
+      transform: translateY(7px);
+    }
+
+    .middleLeft,
+    .middle,
+    .middleRight {
+      grid-row-start: 2;
+    }
+
+    .bottom {
+      transform: translateY(-7px);
+    }
+
+    .middleLeft,
+    .middleRight {
+      box-shadow: 0px 0px 0px 10px #E78481;
+      background: #09042A;
+    }
+
+    .middle {
+      background: #E78481;
+      transform: scale(1.4);
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div class="top"></div>
+  <div class="middleLeft"></div>
+  <div class="middle"></div>
+  <div class="middleRight"></div>
+  <div class="bottom"></div>
+</body>
+</html>
